@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Insight X – Résultats</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav>
+    <div class="logo">API <span>Insight X</span></div>
+    <ul>
+        <li><a href="index.php">Analyser</a></li>
+        <li><a href="index.php?action=history">Historique</a></li>
+        <li><a href="[lienAdmin]">[libelleAdmin]</a></li>
+    </ul>
+</nav>
+
+<main>
+
+    <div class="card">
+        <h2>📊 Résultats de l'analyse</h2>
+        <p class="intro"><strong>URL :</strong> [url]</p>
+        <div class="metrics">
+            <div class="metric-box">
+                <div class="metric-value [httpClass]">[httpCode]</div>
+                <div class="metric-label">Code HTTP</div>
+            </div>
+            <div class="metric-box">
+                <div class="metric-value color-time">[responseTime] ms</div>
+                <div class="metric-label">Temps réponse</div>
+            </div>
+            <div class="metric-box">
+                <div class="metric-value color-size">[responseSize] Ko</div>
+                <div class="metric-label">Taille réponse</div>
+            </div>
+            <div class="metric-box">
+                <div class="metric-value color-count">[itemCount]</div>
+                <div class="metric-label">Éléments</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Score global -->
+    <div class="card">
+        <h2>🏆 Score global</h2>
+        <div class="score-global">
+            <span class="score-number">[score]</span>
+            <span class="score-total"> / 100</span>
+        </div>
+
+        <div class="score-bar-wrap">
+            <div class="score-bar-label">
+                <span>⚡ Performance</span>
+                <span>[scorePerf]/100</span>
+            </div>
+            <div class="score-bar-bg">
+                <div class="score-bar-fill perf" style="width:[scorePerf]%"></div>
+            </div>
+        </div>
+
+        <div class="score-bar-wrap">
+            <div class="score-bar-label">
+                <span>🔒 Sécurité</span>
+                <span>[scoreSecu]/100</span>
+            </div>
+            <div class="score-bar-bg">
+                <div class="score-bar-fill secu" style="width:[scoreSecu]%"></div>
+            </div>
+        </div>
+
+        <div class="score-bar-wrap">
+            <div class="score-bar-label">
+                <span>🧱 Structure</span>
+                <span>[scoreStruct]/100</span>
+            </div>
+            <div class="score-bar-bg">
+                <div class="score-bar-fill struct" style="width:[scoreStruct]%"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Détection automatique -->
+    <div class="card">
+        <h2>🔍 Détection automatique</h2>
+        <table>
+            <tbody>
+                <tr><th>Type d'API</th><td>[apiType]</td></tr>
+                <tr><th>Ressource détectée</th><td>[resourceType]</td></tr>
+                <tr><th>Structure de réponse</th><td>[structure]</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Arbre JSON -->
+    <div class="card">
+        <h2>💡 Structure JSON (premier élément)</h2>
+        <div class="json-tree">
+            <div><span class="root">└── [resourceType]</span></div>
+            <tr>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="key">[tree.key;block=tr]</span>
+                &nbsp;<span class="type">([tree.type;block=tr])</span></td>
+            </tr>
+        </div>
+    </div>
+
+    <!-- Simulations -->
+    <div class="card">
+        <h2>🧪 Simulation de scénarios</h2>
+        <div class="alert alert-warning">⚠️ [sim.val;block=div]</div>
+    </div>
+
+    <!-- Avertissements -->
+    <div class="card">
+        <h2>⚠️ Avertissements détectés</h2>
+        <div class="alert alert-error">❌ [warn.val;block=div]</div>
+    </div>
+
+    <!-- Recommandations -->
+    <div class="card">
+        <h2>💡 Recommandations</h2>
+        <ul class="recs">
+            <li>[rec.val;block=li]</li>
+        </ul>
+    </div>
+
+    <!-- Réponse brute -->
+    <div class="card">
+        <h2>📄 Extrait de la réponse brute</h2>
+        <pre class="raw-response">[rawResponse]</pre>
+    </div>
+
+    <!-- Boutons -->
+    <p class="text-center mt-1">
+        <a href="index.php" class="btn btn-primary">⬅ Nouvelle analyse</a>
+        <a href="index.php?action=history" class="btn btn-secondary">📋 Voir l'historique</a>
+    </p>
+
+</main>
+
+<footer>
+    API Insight X &mdash; L3 Informatique &mdash; Programmation Web Backend &mdash; Lyon 2 By Sarah.G & Moustapha.K
+</footer>
+
+</body>
+</html>

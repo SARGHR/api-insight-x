@@ -1,0 +1,10 @@
+.env
+.env.*
+!.env.example
+*.save
+sessions/*
+!sessions/.gitkeep
+.DS_Store
+*.log
+.env.local
+*.bak

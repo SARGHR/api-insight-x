@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Insight X – Historique</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav>
+    <div class="logo">API <span>Insight X</span></div>
+    <ul>
+        <li><a href="index.php">Analyser</a></li>
+        <li><a href="index.php?action=history" class="active">Historique</a></li>
+        <li><a href="[onshow.lienAdmin]">[onshow.libelleAdmin]</a></li>
+    </ul>
+</nav>
+
+<main>
+
+    <p class="alert [onshow.messageType]">[onshow.message]</p>
+
+    <div class="card">
+        <h2>📋 Historique des analyses</h2>
+        <table>
+            <caption>Analyses enregistrées</caption>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>URL analysée</th>
+                    <th>Code HTTP</th>
+                    <th>Score</th>
+                    <th>Date</th>
+                    <th>[onshow.colonneAction]</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>[scan.id;block=tr]</td>
+                    <td class="url-cell">[scan.url;block=tr]</td>
+                    <td>[scan.http_code;block=tr]</td>
+                    <td>[scan.score;block=tr;htmlconv=no]</td>
+                    <td>[scan.created_at;block=tr]</td>
+                    <td>[scan.lien_suppr;block=tr;htmlconv=no]</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</main>
+
+<footer>
+    API Insight X &mdash; L3 Informatique &mdash; Programmation Web Backend &mdash; Lyon 2 By Sarah.G & Moustapha.K
+</footer>
+
+</body>
+</html>

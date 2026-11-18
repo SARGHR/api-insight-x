@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Insight X – Analyser une API</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav>
+    <div class="logo">API <span>Insight X</span></div>
+    <ul>
+        <li><a href="index.php" class="active">Analyser</a></li>
+        <li><a href="index.php?action=history">Historique</a></li>
+        <li><a href="index.php?action=login">Admin</a></li>
+    </ul>
+</nav>
+
+<main>
+
+    <div class="card">
+        <h2>🔍 Analyser une API REST</h2>
+        <p class="intro">
+            Entrez l'URL d'une API REST publique. L'outil effectuera une requête,
+            analysera la réponse et vous fournira un diagnostic complet avec score et recommandations.
+        </p>
+
+        <form action="index.php" method="post">
+            <input type="hidden" name="action" value="analyze" />
+            <fieldset>
+                <legend>URL de l'API à analyser</legend>
+                <label for="api_url">URL (ex : https://jsonplaceholder.typicode.com/users)</label>
+                <input type="url" id="api_url" name="api_url"
+                       placeholder="https://..." required />
+                <div class="btn-group">
+                    <input type="reset"  value="Réinitialiser"      class="btn btn-secondary" />
+                    <input type="submit" value="🚀 Lancer l'analyse" class="btn btn-primary" />
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="card">
+        <h2>💡 Exemples d'API publiques</h2>
+        <table>
+            <caption>URLs testables directement</caption>
+            <thead>
+                <tr>
+                    <th>API</th>
+                    <th>URL exemple</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>JSONPlaceholder</td>
+                    <td><code>https://jsonplaceholder.typicode.com/users</code></td>
+                    <td>Liste d'utilisateurs fictifs</td>
+                </tr>
+                <tr>
+                    <td>JSONPlaceholder</td>
+                    <td><code>https://jsonplaceholder.typicode.com/posts</code></td>
+                    <td>Liste d'articles (100 éléments)</td>
+                </tr>
+                <tr>
+                    <td>Open Meteo</td>
+                    <td><code>https://api.open-meteo.com/v1/forecast?latitude=45.75&amp;longitude=4.85&amp;current_weather=true</code></td>
+                    <td>Météo actuelle Lyon</td>
+                </tr>
+                <tr>
+                    <td>REST Countries</td>
+                    <td><code>https://restcountries.com/v3.1/name/france</code></td>
+                    <td>Infos sur la France</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</main>
+
+<footer>
+    API Insight X &mdash; L3 Informatique &mdash; Programmation Web Backend &mdash; Lyon 2 By Sarah.G & Moustapha.K
+</footer>
+
+</body>
+</html>
